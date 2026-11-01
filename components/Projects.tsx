@@ -16,6 +16,7 @@ type Project = {
   link?: string;
   github?: string;
   badge?: string;
+  metrics?: [label: string, value: string][];
 };
 
 const projects: Project[] = [
@@ -47,6 +48,33 @@ const projects: Project[] = [
   },
   {
     number: '04',
+    category: 'Quant Finance',
+    name: 'Forex Grid Hedging System',
+    desc: 'Marks a level every 20 pips, enters when price confirms support or resistance, and hedges a losing trade at the half-level instead of stopping out; the whole cycle closes at break-even and 35% of every win is locked away. Version 1 doubled lot sizes (a martingale) and blew up in 10 of 24 pair-years; the flat-lot redesign survived all 24. Backtested 2020–2025 on EUR/USD, AUD/USD, AUD/JPY and EUR/JPY, then ported to Pine Script and an MT5 bot.',
+    stack: ['Python', 'Pandas', 'Pine Script', 'MetaTrader 5'],
+    metrics: [
+      ['Sharpe', '2.19'],
+      ['Win rate', '68%'],
+      ['Calmar', '1.35'],
+      ['Mean annual return', '38.8%'],
+      ['Worst-year drawdown', '28.8%'],
+      ['Trades / year', '~1,170'],
+      ['Blow-ups', '0 / 24'],
+      ['Per-pair Sharpe', '1.0–2.9'],
+    ],
+    link: 'https://shivansh-forex-backtests.vercel.app',
+    github: 'https://github.com/Shivansharmaaaa/forex-zone-trading-algo',
+  },
+  {
+    number: '05',
+    category: 'AI Agents / FinTech',
+    name: 'AgentOS Finance',
+    desc: 'A governed runtime for AI agents in financial services: every action passes policy, risk and compliance checks and human approval before it executes, and each step is audited and streamed live to an operator dashboard. A Neo4j memory graph with customer digital twins drives explainable dispute verdicts, and agents install from a marketplace with a kill switch.',
+    stack: ['Python', 'FastAPI', 'LangGraph', 'Ollama', 'Neo4j', 'Next.js'],
+    github: 'https://github.com/Shivansharmaaaa/agentos',
+  },
+  {
+    number: '06',
     category: 'Voice AI / SaaS',
     name: 'NVIDIA Voice Agent SaaS',
     desc: 'Multi-tenant platform where businesses build AI phone agents in a 5-step wizard and deploy them to a Twilio number. Call audio streams through NVIDIA Nemotron ASR, Nemotron LLM and Magpie TTS, with circuit breakers and a GPU pool that prioritises live calls.',
@@ -54,7 +82,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/nvidia-voice-agent-saas',
   },
   {
-    number: '05',
+    number: '07',
     category: '3D / Creative',
     name: '3D Drive-Through Portfolio',
     desc: 'A portfolio you drive through: a stylised city seen from the driver’s seat, with clickable project billboards, sunset, real-time and cyberpunk skies, speed controls and a low-graphics mode.',
@@ -63,16 +91,16 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/3d-portfolio',
   },
   {
-    number: '06',
-    category: 'Quant Finance',
-    name: 'Forex Grid Hedging System',
-    desc: 'Grid strategy that hedges at 20-pip support/resistance levels. An 8-variant optimiser showed the 2x martingale blew up in 10 of 24 pair-years; the flat-lot redesign survived all 24 with a 68% win rate and Sharpe 2.2. Ported to Pine Script and an MT5 live bot.',
-    stack: ['Python', 'Pandas', 'Pine Script', 'MetaTrader 5'],
-    link: 'https://shivansh-forex-backtests.vercel.app',
-    github: 'https://github.com/Shivansharmaaaa/forex-zone-trading-algo',
+    number: '08',
+    category: 'Web / Motion',
+    name: 'DeskStudio Website',
+    desc: 'Website for DeskStudio, an AI automation studio, built with Next.js; its promo reel is generated in code with Remotion.',
+    stack: ['Next.js', 'Remotion', 'React'],
+    link: 'https://deskstudio-website.vercel.app',
+    github: 'https://github.com/Shivansharmaaaa/deskstudio-website',
   },
   {
-    number: '07',
+    number: '09',
     category: 'Machine Learning',
     name: 'Stock Price Prediction (LSTM)',
     desc: 'Stacked two-layer LSTM that forecasts the next-day close from the previous 60 trading days, compared against a linear-regression baseline, with a rolling-volatility band that shows a likely price range instead of a single number.',
@@ -80,7 +108,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/stock',
   },
   {
-    number: '08',
+    number: '10',
     category: 'Deep Learning',
     name: 'Custom LLM',
     desc: "Built a GPT-style language model from scratch following Andrej Karpathy's series: tokenizer, attention, transformer blocks and the training loop.",
@@ -88,7 +116,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/LLM',
   },
   {
-    number: '09',
+    number: '11',
     category: 'UI / Frontend',
     name: 'Restaurant UI — Design 1',
     desc: 'A beautifully crafted frontend UI concept for a restaurant website, with modern design and engaging interactions.',
@@ -97,7 +125,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/Design-1',
   },
   {
-    number: '10',
+    number: '12',
     category: 'UI / Frontend',
     name: 'Restaurant UI — Design 2',
     desc: 'A second iteration exploring different layout patterns and interaction paradigms for restaurant branding.',
@@ -108,7 +136,7 @@ const projects: Project[] = [
 ];
 
 const singleProject: Project = {
-  number: '11',
+  number: '13',
   category: 'AI / Automation',
   name: 'Visa Appointment Bot',
   desc: 'A Telegram bot that lets non-technical staff run the whole visa appointment booking workflow through chat commands, with no separate app to build or maintain.',
@@ -132,6 +160,16 @@ function ProjectCard({ p }: { p: Project }) {
         <h3 className="project-name">{p.name}</h3>
         {p.badge && <div className="project-badge">{p.badge}</div>}
         <p className="project-desc">{p.desc}</p>
+        {p.metrics && (
+          <dl className="project-metrics">
+            {p.metrics.map(([label, value]) => (
+              <div key={label} className="project-metric">
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
         <div className="project-stack">
           {p.stack.map((s) => (
             <span key={s} className="stack-tag">{s}</span>
