@@ -67,14 +67,6 @@ const projects: Project[] = [
   },
   {
     number: '05',
-    category: 'AI Agents / FinTech',
-    name: 'AgentOS Finance',
-    desc: 'A governed runtime for AI agents in financial services: every action passes policy, risk and compliance checks and human approval before it executes, and each step is audited and streamed live to an operator dashboard. A Neo4j memory graph with customer digital twins drives explainable dispute verdicts, and agents install from a marketplace with a kill switch.',
-    stack: ['Python', 'FastAPI', 'LangGraph', 'Ollama', 'Neo4j', 'Next.js'],
-    github: 'https://github.com/Shivansharmaaaa/agentos',
-  },
-  {
-    number: '06',
     category: 'Voice AI / SaaS',
     name: 'NVIDIA Voice Agent SaaS',
     desc: 'Multi-tenant platform where businesses build AI phone agents in a 5-step wizard and deploy them to a Twilio number. Call audio streams through NVIDIA Nemotron ASR, Nemotron LLM and Magpie TTS, with circuit breakers and a GPU pool that prioritises live calls.',
@@ -82,7 +74,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/nvidia-voice-agent-saas',
   },
   {
-    number: '07',
+    number: '06',
     category: '3D / Creative',
     name: '3D Drive-Through Portfolio',
     desc: 'A portfolio you drive through: a stylised city seen from the driver’s seat, with clickable project billboards, sunset, real-time and cyberpunk skies, speed controls and a low-graphics mode.',
@@ -91,7 +83,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/3d-portfolio',
   },
   {
-    number: '08',
+    number: '07',
     category: 'Web / Motion',
     name: 'DeskStudio Website',
     desc: 'Website for DeskStudio, an AI automation studio, built with Next.js; its promo reel is generated in code with Remotion.',
@@ -100,7 +92,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/deskstudio-website',
   },
   {
-    number: '09',
+    number: '08',
     category: 'Machine Learning',
     name: 'Stock Price Prediction (LSTM)',
     desc: 'Stacked two-layer LSTM that forecasts the next-day close from the previous 60 trading days, compared against a linear-regression baseline, with a rolling-volatility band that shows a likely price range instead of a single number.',
@@ -108,7 +100,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/stock',
   },
   {
-    number: '10',
+    number: '09',
     category: 'Deep Learning',
     name: 'Custom LLM',
     desc: "Built a GPT-style language model from scratch following Andrej Karpathy's series: tokenizer, attention, transformer blocks and the training loop.",
@@ -116,7 +108,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/LLM',
   },
   {
-    number: '11',
+    number: '10',
     category: 'UI / Frontend',
     name: 'Restaurant UI — Design 1',
     desc: 'A beautifully crafted frontend UI concept for a restaurant website, with modern design and engaging interactions.',
@@ -125,7 +117,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/Design-1',
   },
   {
-    number: '12',
+    number: '11',
     category: 'UI / Frontend',
     name: 'Restaurant UI — Design 2',
     desc: 'A second iteration exploring different layout patterns and interaction paradigms for restaurant branding.',
@@ -133,15 +125,14 @@ const projects: Project[] = [
     link: 'https://design-2-zeta.vercel.app/',
     github: 'https://github.com/Shivansharmaaaa/Design-2',
   },
+  {
+    number: '12',
+    category: 'AI / Automation',
+    name: 'Visa Appointment Bot',
+    desc: 'A Telegram bot that lets non-technical staff run the whole visa appointment booking workflow through chat commands, with no separate app to build or maintain.',
+    stack: ['JavaScript', 'Telegram API', 'Automation'],
+  },
 ];
-
-const singleProject: Project = {
-  number: '13',
-  category: 'AI / Automation',
-  name: 'Visa Appointment Bot',
-  desc: 'A Telegram bot that lets non-technical staff run the whole visa appointment booking workflow through chat commands, with no separate app to build or maintain.',
-  stack: ['JavaScript', 'Telegram API', 'Automation'],
-};
 
 function ArrowIcon() {
   return (
@@ -235,9 +226,6 @@ export default function Projects() {
           {projects.map((p) => (
             <ProjectCard key={p.number} p={p} />
           ))}
-        </div>
-        <div className="project-single">
-          <ProjectCard p={singleProject} />
         </div>
       </div>
     </section>
