@@ -34,6 +34,7 @@ const projects: Project[] = [
     name: 'GraphRAG Threat Intelligence',
     desc: 'Team project: GraphRAG over Neo4j, MongoDB, Qdrant and Redis, loaded with MITRE ATT&CK and live threat feeds. Every answer cites its evidence across all four stores and can be replayed to re-verify it; IOC lookups run at 1.8 ms median.',
     stack: ['Python', 'FastAPI', 'React', 'Neo4j', 'MongoDB', 'Redis', 'Qdrant'],
+    link: 'https://graphrag-cti.vercel.app',
     github: 'https://github.com/Shivansharmaaaa/graphrag',
   },
   {
