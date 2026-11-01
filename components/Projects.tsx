@@ -38,21 +38,39 @@ const projects: Project[] = [
   },
   {
     number: '03',
-    category: 'Voice AI / SaaS',
-    name: 'Voice Agent SaaS',
-    desc: 'Multi-tenant platform where businesses build AI phone agents in a 5-step wizard and deploy them to a Twilio number. Call audio streams through NVIDIA Nemotron ASR, Nemotron LLM and Magpie TTS, with circuit breakers and a GPU pool that prioritises live calls.',
-    stack: ['Next.js', 'NestJS', 'PostgreSQL', 'Redis', 'FastAPI', 'Twilio'],
+    category: 'Voice AI',
+    name: 'Voice Agent — AI Receptionist',
+    desc: 'Answers calls for local businesses, qualifies the caller, books the job and escalates to a human, all running on a laptop. The browser decides when the caller stops and Parakeet decides what they said (51 ms, 0% WER); an instant opener cuts time-to-first-word from 3.5 s to under 20 ms. A LoRA fine-tuned Llama 3.2 3B passes 41/42 call checks.',
+    stack: ['Next.js', 'TypeScript', 'Parakeet', 'Kokoro TTS', 'Llama 3.2', 'Twilio'],
     github: 'https://github.com/Shivansharmaaaa/voice-agent',
   },
   {
     number: '04',
+    category: 'Voice AI / SaaS',
+    name: 'NVIDIA Voice Agent SaaS',
+    desc: 'Multi-tenant platform where businesses build AI phone agents in a 5-step wizard and deploy them to a Twilio number. Call audio streams through NVIDIA Nemotron ASR, Nemotron LLM and Magpie TTS, with circuit breakers and a GPU pool that prioritises live calls.',
+    stack: ['Next.js', 'NestJS', 'PostgreSQL', 'Redis', 'FastAPI', 'Twilio'],
+    github: 'https://github.com/Shivansharmaaaa/nvidia-voice-agent-saas',
+  },
+  {
+    number: '05',
+    category: '3D / Creative',
+    name: '3D Drive-Through Portfolio',
+    desc: 'A portfolio you drive through: a stylised city seen from the driver’s seat, with clickable project billboards, sunset, real-time and cyberpunk skies, speed controls and a low-graphics mode.',
+    stack: ['React', 'Three.js', 'React Three Fiber', 'Vite'],
+    link: 'https://shivansh-3d-portfolio.vercel.app',
+    github: 'https://github.com/Shivansharmaaaa/3d-portfolio',
+  },
+  {
+    number: '06',
     category: 'Quant Finance',
     name: 'Forex Grid Hedging System',
     desc: 'Grid strategy that hedges at 20-pip support/resistance levels. An 8-variant optimiser showed the 2x martingale blew up in 10 of 24 pair-years; the flat-lot redesign survived all 24 with a 68% win rate and Sharpe 2.2. Ported to Pine Script and an MT5 live bot.',
     stack: ['Python', 'Pandas', 'Pine Script', 'MetaTrader 5'],
+    github: 'https://github.com/Shivansharmaaaa/forex-zone-trading-algo',
   },
   {
-    number: '05',
+    number: '07',
     category: 'Machine Learning',
     name: 'Stock Price Prediction (LSTM)',
     desc: 'Stacked two-layer LSTM that forecasts the next-day close from the previous 60 trading days, compared against a linear-regression baseline, with a rolling-volatility band that shows a likely price range instead of a single number.',
@@ -60,7 +78,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/stock',
   },
   {
-    number: '06',
+    number: '08',
     category: 'Deep Learning',
     name: 'Custom LLM',
     desc: "Built a GPT-style language model from scratch following Andrej Karpathy's series: tokenizer, attention, transformer blocks and the training loop.",
@@ -68,7 +86,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/LLM',
   },
   {
-    number: '07',
+    number: '09',
     category: 'UI / Frontend',
     name: 'Restaurant UI — Design 1',
     desc: 'A beautifully crafted frontend UI concept for a restaurant website, with modern design and engaging interactions.',
@@ -77,7 +95,7 @@ const projects: Project[] = [
     github: 'https://github.com/Shivansharmaaaa/Design-1',
   },
   {
-    number: '08',
+    number: '10',
     category: 'UI / Frontend',
     name: 'Restaurant UI — Design 2',
     desc: 'A second iteration exploring different layout patterns and interaction paradigms for restaurant branding.',
@@ -88,7 +106,7 @@ const projects: Project[] = [
 ];
 
 const singleProject: Project = {
-  number: '09',
+  number: '11',
   category: 'AI / Automation',
   name: 'Visa Appointment Bot',
   desc: 'A Telegram bot that lets non-technical staff run the whole visa appointment booking workflow through chat commands, with no separate app to build or maintain.',
