@@ -46,29 +46,25 @@ export default function Experience() {
       </h2>
       <div className="exp-list">
         <div className="exp-item">
-          <div className="exp-date">
-            Jun 2025 — Present
-            <div className="status">
-              <span className="status-dot"></span> Active
-            </div>
-          </div>
+          <div className="exp-date">Jan 2026 — Jun 2026</div>
           <div>
             <div className="exp-role">Software Developer</div>
-            <div className="exp-company">VI Security — Canada</div>
+            <div className="exp-company">VI Official — Canada (Hybrid)</div>
             <div className="exp-desc">
-              <li>Building Flutter-based applications for student and employee login, training and certification, job postings, and content delivery</li>
-              <li>Architecting end-to-end mobile solutions for security-focused platforms</li>
+              <li>Built a full-stack job posting and discovery app connecting employers with security and healthcare staff</li>
+              <li>Built a clock-in/out module giving employers live staff location and shift times; the app has 1,000+ active users</li>
+              <li>Built a Telegram bot that lets an immigration client&apos;s non-technical staff run visa appointment booking by chat</li>
             </div>
           </div>
         </div>
         <div className="exp-item">
-          <div className="exp-date">Apr 2025 — Aug 2025</div>
+          <div className="exp-date">May 2025 — Jun 2025</div>
           <div>
-            <div className="exp-role">Software Developer</div>
-            <div className="exp-company">One on One Healthcare — Canada</div>
+            <div className="exp-role">Web Developer</div>
+            <div className="exp-company">One on One Healthcare — Canada (Remote)</div>
             <div className="exp-desc">
-              <li>Connected and configured GitHub, Vercel, and GoDaddy to streamline deployment workflows</li>
-              <li>Managed urgent technical requests during late hours due to international operations</li>
+              <li>Redesigned the company website end-to-end, improving layout, content structure and usability</li>
+              <li>Migrated the site to Vercel and handed over a streamlined setup the team now updates independently</li>
             </div>
           </div>
         </div>

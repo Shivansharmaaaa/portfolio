@@ -9,16 +9,28 @@ gsap.registerPlugin(ScrollTrigger);
 
 const skillData = [
   {
+    label: 'Languages',
+    pills: ['C', 'C++', 'Java', 'Python', 'JavaScript', 'TypeScript', 'Solidity'],
+  },
+  {
     label: 'Development',
-    pills: ['Flutter', 'Full-Stack Development', 'Frontend Development', 'Backend Development', 'UI/UX Design'],
+    pills: ['Full-Stack Development', 'React', 'Next.js', 'Node.js', 'NestJS', 'FastAPI', 'Flutter', 'WebSockets'],
+  },
+  {
+    label: 'Databases',
+    pills: ['PostgreSQL', 'MongoDB', 'Neo4j', 'Redis', 'Qdrant'],
   },
   {
     label: 'DevOps & Tools',
-    pills: ['GitHub', 'Vercel', 'GoDaddy', 'CI/CD Pipelines'],
+    pills: ['Docker', 'Kubernetes', 'GitHub Actions', 'Vercel', 'GitHub', 'CI/CD Pipelines'],
   },
   {
     label: 'AI & Machine Learning',
-    pills: ['Machine Learning', 'Deep Learning', 'AI Tools', 'LLMs'],
+    pills: ['LLM Fine-Tuning (LoRA)', 'RAG / GraphRAG', 'LSTMs', 'Transformers', 'TensorFlow', 'scikit-learn'],
+  },
+  {
+    label: 'Core CS',
+    pills: ['Data Structures & Algorithms', 'OOP', 'DBMS', 'Operating Systems', 'Computer Networks'],
   },
 ];
 

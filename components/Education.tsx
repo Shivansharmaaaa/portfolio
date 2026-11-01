@@ -46,7 +46,7 @@ export default function Education() {
       <SectionLabel number="05" text="Education" />
       <h2 className="section-heading">Education</h2>
       <div className="edu-block" ref={blockRef}>
-        <div className="edu-degree">B.Sc. Computer Science (Core)</div>
+        <div className="edu-degree">B.Tech Computer Science and Engineering (Core)</div>
         <div className="edu-school">Vellore Institute of Technology, Vellore</div>
         <div className="edu-year">Expected Graduation — 2027</div>
       </div>
