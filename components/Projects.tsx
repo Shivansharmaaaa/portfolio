@@ -67,6 +67,7 @@ const projects: Project[] = [
     name: 'Forex Grid Hedging System',
     desc: 'Grid strategy that hedges at 20-pip support/resistance levels. An 8-variant optimiser showed the 2x martingale blew up in 10 of 24 pair-years; the flat-lot redesign survived all 24 with a 68% win rate and Sharpe 2.2. Ported to Pine Script and an MT5 live bot.',
     stack: ['Python', 'Pandas', 'Pine Script', 'MetaTrader 5'],
+    link: 'https://shivansh-forex-backtests.vercel.app',
     github: 'https://github.com/Shivansharmaaaa/forex-zone-trading-algo',
   },
   {
